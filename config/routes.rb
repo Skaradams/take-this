@@ -1,10 +1,4 @@
-Takethis::Application.routes.draw do
-  # get "home/index"
-
-  root :to => "home#index", :as => :home
-  resources :articles, :as => :articles
-
-
+TakeThis::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

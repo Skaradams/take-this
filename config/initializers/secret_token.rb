@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Takethis::Application.config.secret_token = '3eda9d3fa1a699a0d3f059ffe0b5f1687d90d72657c61ab6e719ac1239a8faab979294a95b5cc9aafd31e025e5e3f9c7b005d7cb97ef0b5ce43c3480c9abf69c'
+TakeThis::Application.config.secret_token = '43780c1cdfa5b703c5b27623f4fa89f1b3666f1ed728fb17166c370deed323253972848fe19795295b633ef7f14135d7fba829abc268fdbf806635ded701bc5b'
