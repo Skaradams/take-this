@@ -1,0 +1,25 @@
+#article-carousel.carousel.slide
+	.carousel-inner
+		- cssclass = 'active'
+		- @articles.each do |article|
+			.item{:class => cssclass}
+				= image_tag ''
+				.item-caption= article.title
+			- cssclass = ''
+	%a.carousel-control.left{"data-slide" => "prev", :href => "#article-carousel"} ‹
+	%a.carousel-control.right{"data-slide" => "next", :href => "#article-carousel"} ›	
+%ul{:class => 'nav nav-tabs'}
+	%li{:class => 'active'} 
+		%a Current Gen
+	%li 
+		%a Retrogaming
+#tab-content
+	.accordion-wrapper
+		.accordion-block
+			%h2 Tests
+			=render 'articles_list', :locals => {:articles => @articles}
+		.accordion-block
+			%h2 Previews
+			=render 'articles_list', :locals => {:articles => @articles}
+
+

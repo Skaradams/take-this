@@ -1,0 +1,36 @@
+#article-carousel {
+	z-index:0;
+	width:90%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#article-carousel img{
+	z-index:0;
+	height:200px;
+	width:100%;
+}
+
+.tabs {
+	overflow: hidden;
+}
+
+.tabs li {
+	float:left;
+}
+
+.accordion {
+	
+}
+
+.accordion-wrapper {
+	overflow:hidden;
+}
+
+.accordion-block {
+	float:left;
+	width: 250px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: black 1px solid;
+}

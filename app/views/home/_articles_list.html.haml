@@ -1,0 +1,5 @@
+.accordion
+	- @articles.each do |article|
+		.accordion-heading
+			%h3{:class => 'accordion-toggle'}= article.title
+		%div{:class => 'accordion-body in collapse'}= article.body
