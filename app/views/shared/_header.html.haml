@@ -1,0 +1,21 @@
+#header-logo  
+  .logo
+    = link_to image_tag(''), home_path  
+    %a#header-title
+      %span Take
+      %span This
+  .punchline ...it's dangerous to go alone.
+
+#main-controls
+  .main-control.left
+    .control-link
+      = link_to image_tag(""), new_article_path 
+    %span b
+  .main-control.right
+    .control-link
+      = link_to image_tag(""), articles_path 
+    %span a
+#header-right
+  #connect-links
+    = link_to 'Sign in', "#", :class => 'show-panel'
+    = link_to 'Register', "#", :class => 'show-panel'

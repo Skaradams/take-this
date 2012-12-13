@@ -1,2 +1,5 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+- @games.each do |game|
+  - game.articles.each do |article|
+    .article_thumb
+      .title= link_to game.title, article
+      .author= "par #{article.author.name}"

@@ -1,11 +1,15 @@
-!!!
+!!! 5
 %html
   %head
-    %title TakeThis
+    %title= "TakeThis"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+
   %body
-    %p.notice= flash[:notice]
-    %p.error= flash[:error]
-    = yield
+    %div{:id => "profile-panel"}
+    %div{:id => "header"}
+      =render "shared/header"
+    #content
+      = yield
+    %div{:id => "footer"}

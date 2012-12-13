@@ -23,7 +23,6 @@ end
 gem 'jquery-rails'
 
 gem "devise"
-gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
 gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
 gem "haml", ">= 3.0.0"
 gem 'paperclip'
