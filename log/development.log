@@ -5439,3 +5439,2431 @@ ActionController::RoutingError (No route matches [GET] "/assets"):
 
 
   Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Processing by HomeController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (41.6ms)
+  Rendered shared/_header.html.haml (2.4ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset /application.js - 304 Not Modified (80ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 16:36:53 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 18:23:53 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (30.3ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)
+  [1m[36mEXPLAIN (0.3ms)[0m  [1mEXPLAIN QUERY PLAN SELECT "games".* FROM "games" [0m
+  [1m[35mEXPLAIN (0.2ms)[0m  EXPLAIN QUERY PLAN SELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)
+EXPLAIN for: SELECT "games".* FROM "games" 
+0|0|0|SCAN TABLE games (~1000000 rows)
+
+EXPLAIN for: SELECT "articles".* FROM "articles"  WHERE "articles"."game_id" IN (14, 15)
+0|0|0|SCAN TABLE articles (~100000 rows)
+0|0|0|EXECUTE LIST SUBQUERY 1
+
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1161.5ms)
+  Rendered shared/_header.html.haml (16.5ms)
+Completed 200 OK in 2620ms (Views: 1929.7ms | ActiveRecord: 141.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 18:23:59 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered home/index.html.haml within layouts/application (38.5ms)
+  Rendered shared/_header.html.haml (2.6ms)
+Completed 200 OK in 61ms (Views: 57.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /src/panel.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /application.js - 304 Not Modified (95ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /src/layout.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /src/home.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:00 +0100
+Served asset /src/home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:01 +0100
+Served asset / - 404 Not Found (119ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.haml within layouts/application (3.6ms)
+  Rendered shared/_header.html.haml (2.7ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:06 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered home/index.html.haml within layouts/application (38.7ms)
+  Rendered shared/_header.html.haml (2.4ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:08 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 14
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 15
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered articles/index.html.haml within layouts/application (51.2ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 89ms (Views: 83.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /src/home.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:10 +0100
+Served asset / - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Processing by HomeController#index as HTML
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" IN (14, 15)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (39.7ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:12 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mGame Load (1.3ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 14[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 15[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 12 LIMIT 1
+  Rendered articles/index.html.haml within layouts/application (38.2ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:24:43 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:24:44 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (37.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" 
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (48.6ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 16]]
+  [1m[36m (191.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 17]]
+  [1m[35m (172.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 18]]
+  [1m[36m (141.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 19]]
+  [1m[35m (153.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 20]]
+  [1m[36m (164.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 21]]
+  [1m[35m (164.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 22]]
+  [1m[36m (164.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 23]]
+  [1m[35m (164.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 24]]
+  [1m[36m (164.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 25]]
+  [1m[35m (186.4ms)[0m  commit transaction
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 14]]
+  [1m[35m (196.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "games" WHERE "games"."id" = ?  [["id", 15]]
+  [1m[36m (205.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 10]]
+  [1m[36m (132.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (138.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 12]]
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35m (108.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'joe@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (21.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "joe@gmail.com"], ["encrypted_password", "$2a$10$M06/cwiJCRQDTYz7qtEcy.utBeZqENcF0M3Xo3waucLg6iXoId2Fq"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Joe"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00]]
+  [1m[35m (188.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'william@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "william@gmail.com"], ["encrypted_password", "$2a$10$TjFgS/QnXHfBeSiFHb88He0z1ncoQBHFBYti3XwJQAsEaQFKCYjoG"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "William"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00]]
+  [1m[35m (126.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'jack@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "jack@gmail.com"], ["encrypted_password", "$2a$10$ffXOO7qcbVVKhNDgwJ1ZvetFKM8fBoTrSk36A7xQ4kZilSLYMDND2"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Jack"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00]]
+  [1m[35m (125.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'averell@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "averell@gmail.com"], ["encrypted_password", "$2a$10$uwPhGoklBYHQw5u1D5HGLe7tGgDeqsb9Do2vouuNo.HFSe2dBZHza"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Averell"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 13 Dec 2012 17:26:56 UTC +00:00]]
+  [1m[35m (138.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "games" ("created_at", "released_on", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["released_on", Thu, 13 Dec 2007], ["title", "Super mario bros"], ["updated_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00]]
+  [1m[36m (201.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "games" ("created_at", "released_on", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["released_on", Thu, 13 Dec 2007], ["title", "The legend of Zelda"], ["updated_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00]]
+  [1m[35m (203.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "Super mario bros c'est fantastique"], ["created_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["game_id", 16], ["likes", 802], ["title", "Article-1"], ["updated_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["user_id", 17]]
+  [1m[36m (195.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Super mario bros c'est nul"], ["created_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["game_id", 16], ["likes", 583], ["title", "Article-2"], ["updated_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["user_id", 15]]
+  [1m[35m (149.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "Super mario bros c'est cool"], ["created_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["game_id", 16], ["likes", 375], ["title", "Article-3"], ["updated_at", Thu, 13 Dec 2012 17:26:57 UTC +00:00], ["user_id", 16]]
+  [1m[36m (159.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "Super mario bros c'est cool"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 16], ["likes", 150], ["title", "Article-4"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 17]]
+  [1m[35m (159.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "Super mario bros c'est cool"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 16], ["likes", 410], ["title", "Article-5"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 17]]
+  [1m[36m (137.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "The legend of Zelda c'est fantastique"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 17], ["likes", 277], ["title", "Article-1"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 15]]
+  [1m[35m (148.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "The legend of Zelda c'est moyen"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 17], ["likes", 317], ["title", "Article-2"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 15]]
+  [1m[36m (149.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "The legend of Zelda c'est cool"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 17], ["likes", 298], ["title", "Article-3"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 17]]
+  [1m[35m (148.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "The legend of Zelda c'est moyen"], ["created_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["game_id", 17], ["likes", 628], ["title", "Article-4"], ["updated_at", Thu, 13 Dec 2012 17:26:58 UTC +00:00], ["user_id", 16]]
+  [1m[36m (215.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "articles" ("body", "created_at", "game_id", "likes", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "The legend of Zelda c'est fantastique"], ["created_at", Thu, 13 Dec 2012 17:26:59 UTC +00:00], ["game_id", 17], ["likes", 650], ["title", "Article-5"], ["updated_at", Thu, 13 Dec 2012 17:26:59 UTC +00:00], ["user_id", 16]]
+  [1m[35m (159.4ms)[0m  commit transaction
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered articles/index.html.haml within layouts/application (38.3ms)
+  Rendered shared/_header.html.haml (2.4ms)
+Completed 200 OK in 63ms (Views: 57.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:27:11 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-13 18:27:57 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered articles/index.html.haml within layouts/application (133.0ms)
+  Rendered shared/_header.html.haml (2.3ms)
+Completed 200 OK in 192ms (Views: 151.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:27:58 +0100
+Served asset / - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (42.6ms)
+  Rendered shared/_header.html.haml (2.4ms)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /src/layout.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-13 18:28:00 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-14 10:39:07 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (571.0ms)
+  Rendered shared/_header.html.haml (33.0ms)
+Completed 200 OK in 2301ms (Views: 1406.8ms | ActiveRecord: 123.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /src/home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /src/panel.js - 304 Not Modified (142ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /src/home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /application.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:39:10 +0100
+Served asset /src/layout.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:39:11 +0100
+Served asset / - 404 Not Found (21ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/articles
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered articles/index.html.haml within layouts/application (193.6ms)
+  Rendered shared/_header.html.haml (2.6ms)
+Completed 200 OK in 254ms (Views: 212.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /src/home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:44:51 +0100
+Served asset / - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:44:53 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/articles
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-14 10:44:53 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered articles/index.html.haml within layouts/application (39.7ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 65ms (Views: 59.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:44:54 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered articles/index.html.haml within layouts/application (138.5ms)
+  Rendered shared/_header.html.haml (2.4ms)
+Completed 200 OK in 273ms (Views: 231.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:46:54 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:46:55 +0100
+Served asset / - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:46:56 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/users
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-14 10:46:56 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-14 10:47:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:47:33 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (5.2ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (141.9ms)
+  Rendered shared/_header.html.haml (2.7ms)
+Completed 200 OK in 215ms (Views: 166.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:36 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:36 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:36 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:47:36 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (73.2ms)
+  Rendered shared/_header.html.haml (2.6ms)
+Completed 200 OK in 136ms (Views: 94.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:47:38 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Processing by HomeController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered home/index.html.haml within layouts/application (37.8ms)
+  Rendered shared/_header.html.haml (2.7ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:49:21 +0100
+Served asset / - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.2ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (9.7ms)
+  Rendered shared/_header.html.haml (2.9ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:23 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:49:24 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:49:24 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.2ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (10.1ms)
+Compiled src/layout.css  (173ms)  (pid 2961)
+Compiled application.css  (6ms)  (pid 2961)
+  Rendered shared/_header.html.haml (2.8ms)
+Completed 200 OK in 269ms (Views: 267.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /src/layout.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset /application.js - 304 Not Modified (80ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:50:34 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:50:36 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:50:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.2ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (10.1ms)
+  Rendered shared/_header.html.haml (2.8ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:36 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:36 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:50:37 +0100
+Served asset / - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-14 10:50:45 +0100
+Processing by HomeController#index as HTML
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" [0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (38.3ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:45 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:45 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:45 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:45 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:46 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:46 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:46 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:50:46 +0100
+Served asset / - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-12-14 10:50:47 +0100
+Processing by ArticlesController#new as HTML
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:50:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (9.9ms)
+  Rendered shared/_header.html.haml (2.9ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:47 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:50:48 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (10.6ms)
+  Rendered shared/_header.html.haml (79.4ms)
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:50:58 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Processing by HomeController#index as HTML
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games" 
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 16[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."game_id" = 17[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 15 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  Rendered home/index.html.haml within layouts/application (38.7ms)
+  Rendered shared/_header.html.haml (2.5ms)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/src/home.css?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /src/home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/layout.css?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /src/layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/home.js?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /src/home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/src/panel.js?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /src/panel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-12-14 10:51:00 +0100
+Served asset / - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.1) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.1) lib/rack/server.rb:265:in `start'
+  railties (3.2.8) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.8) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.8) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.8) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/skaradams/.rvm/gems/ruby-1.9.3-p327@takethis/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)

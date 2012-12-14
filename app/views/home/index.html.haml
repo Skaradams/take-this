@@ -1,5 +1,7 @@
-- @games.each do |game|
-  - game.articles.each do |article|
-    .article_thumb
-      .title= link_to game.title, article
-      .author= "par #{article.author.name}"
+- @articles.each do |game_title, articles|
+  .game= game_title 
+  .articles
+    - articles.each do |article|
+      .article_thumb
+        = link_to article.title, article
+        .author= "by #{article.author.name}"

@@ -18,7 +18,7 @@ games.each do |game|
   adjectives = %w(cool nul moyen fantastique)
   (1..5).each do |i|
     p "**** creating #{game.title} : article#{i}"  
-    Article.create title: "Article-#{i}", body: "#{game.title} c'est #{adjectives.sample}", game: game, author: users.sample
+    Article.create title: "Article-#{i}", body: "#{game.title} c'est #{adjectives.sample}", likes: rand(1000), game: game, author: users.sample
   end
 p "Done"
 end

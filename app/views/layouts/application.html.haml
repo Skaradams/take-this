@@ -7,9 +7,11 @@
     = csrf_meta_tags
 
   %body
-    %div{:id => "profile-panel"}
-    %div{:id => "header"}
+    #profile-panel
+    #header
       =render "shared/header"
     #content
+      .success= flash[:success]
+      .error= flash[:error]
       = yield
-    %div{:id => "footer"}
+    #footer
