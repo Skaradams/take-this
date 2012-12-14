@@ -1,8 +1,8 @@
 max_height = 200;
 
 $(document).ready(function(){
-	$(".show-panel").bind('click', showPanel);
-	$(".hide-panel").bind('click', hidePanel);
+	// $(".show-panel").bind('click', showPanel);
+	// $(".hide-panel").bind('click', hidePanel);
 })
 
 function togglePanel() {

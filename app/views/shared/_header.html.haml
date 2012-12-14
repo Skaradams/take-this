@@ -1,6 +1,6 @@
 #header-logo  
   .logo
-    = link_to image_tag(''), home_path  
+    = link_to image_tag('template/logo.png'), home_path  
     %a#header-title
       %span Take
       %span This
@@ -17,5 +17,5 @@
     %span a
 #header-right
   #connect-links
-    = link_to 'Sign in', "#", :class => 'show-panel'
-    = link_to 'Register', "#", :class => 'show-panel'
+    = link_to 'Sign in', new_user_session_path, :class => 'show-panel'
+    = link_to 'Register', new_user_registration_path, :class => 'show-panel'
